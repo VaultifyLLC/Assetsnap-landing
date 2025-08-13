@@ -90,7 +90,7 @@
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
+    <div class="absolute inset-0 opacity-20 pointer-events-none">
       <div class="gold-gradient w-[140%] h-[140%] rounded-full blur-3xl absolute -top-40 -left-40 rotate-12"></div>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
@@ -142,7 +142,7 @@
         </div>
         <div class="glass rounded-2xl p-6 border border-white/10">
           <div class="text-2xl font-bold mb-2">Policy Gap Alerts</div>
-          <p class="text-white/70">Upload a homeowner's or business's insurance policy to spot under‑insured categories.</p>
+          <p class="text-white/70">Upload a homeowners or BOP policy to spot under‑insured categories.</p>
         </div>
         <div class="glass rounded-2xl p-6 border border-white/10">
           <div class="text-2xl font-bold mb-2">Carrier‑First</div>
@@ -294,7 +294,7 @@
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm text-white/70 mb-1" for="role">I am a</label>
-              <select id="role" name="role" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none text-white">
+              <select id="role" name="role" class="w-full px-4 py-3 rounded-xl bg-black/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none text-white">
                 <option value="Policyholder">Policyholder</option>
                 <option value="Insurance Carrier">Insurance Carrier</option>
                 <option value="Insurance Agent/Broker">Insurance Agent/Broker</option>
@@ -303,7 +303,7 @@
             </div>
             <div>
               <label class="block text-sm text-white/70 mb-1" for="company">Company (optional)</label>
-              <input id="company" name="company" type="text" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/15 focus:border-[var(--brand-gold)] outline-none" placeholder="Acme Insurance Co." />
+              <input id="company" name="company" type="text" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none" placeholder="Acme Insurance Co." />
             </div>
           </div>
 
