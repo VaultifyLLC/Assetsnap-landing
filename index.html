@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asset Snap — Cover Your ASSets</title>
+  <title>Asset Snap — Cover Your Assets</title>
   <meta name="description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist for Asset Snap by Vaultify." />
   <meta property="og:title" content="Asset Snap — Cover Your Assets" />
   <meta property="og:description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist." />
@@ -65,7 +65,10 @@
     .glass{backdrop-filter:saturate(140%) blur(10px); background:rgba(255,255,255,0.06)}
     .ring-gold{box-shadow:0 0 0 2px rgba(245,197,66,0.35)}
     .accent-shadow{box-shadow:0 10px 30px rgba(245,197,66,0.18)}
-  </style>
+    /* Ensure native select dropdowns are readable on dark theme */
+    select { color:#fff; background:rgba(255,255,255,0.06); }
+    select option, select optgroup { color:#111; background:#fff; }
+</style>
 </head>
 <body class="bg-[var(--brand-black)] text-white">
   <!-- Header -->
@@ -100,7 +103,7 @@
             MVP Waitlist now open
           </div>
           <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            Cover Your ASSets.
+            Cover Your Assets.
             <span class="text-[var(--brand-gold)]">Automatically.</span>
           </h1>
           <p class="mt-5 text-white/80 text-lg max-w-xl">
@@ -293,7 +296,7 @@
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm text-white/70 mb-1" for="role">I am a</label>
-              <select id="role" name="role" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none">
+              <select id="role" name="role" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none text-white">
                 <option value="Policyholder">Policyholder</option>
                 <option value="Insurance Carrier">Insurance Carrier</option>
                 <option value="Insurance Agent/Broker">Insurance Agent/Broker</option>
