@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asset Snap — Cover Your Assets</title>
+  <title>Asset Snap — Cover Your ASSets</title>
   <meta name="description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist for Asset Snap by Vaultify." />
   <meta property="og:title" content="Asset Snap — Cover Your Assets" />
   <meta property="og:description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist." />
@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com">  // Audience tab logic: toggles content, preselects role, and updates CTA label
-  (function(){
+  document.addEventListener('DOMContentLoaded', function(){
     const tabBtns = document.querySelectorAll('[data-audience-tab]');
     const policy = document.getElementById('audience-policyholder');
     const carrier = document.getElementById('audience-carrier');
@@ -39,7 +39,6 @@
       if(submitLabel){
         submitLabel.textContent = aud==='carrier' ? 'Join the carrier pilot' : 'Join the waitlist';
       }
-      // persist in hash for shareable state
       try { history.replaceState(null,'', aud==='carrier' ? '#for-carriers' : '#for-policyholders'); } catch(e){}
     }
 
@@ -47,11 +46,10 @@
       btn.addEventListener('click', ()=> setActive(btn.getAttribute('data-audience-tab')));
     });
 
-    // initialize based on hash or default
     const hash = location.hash;
     const defaultAud = (hash==='#for-carriers') ? 'carrier' : 'policyholder';
     setActive(defaultAud);
-  })();
+  });
 </script>
   <style>
     :root{
@@ -103,7 +101,7 @@
             MVP Waitlist now open
           </div>
           <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            Cover Your Assets.
+            Cover Your ASSets.
             <span class="text-[var(--brand-gold)]">Automatically.</span>
           </h1>
           <p class="mt-5 text-white/80 text-lg max-w-xl">
