@@ -70,23 +70,38 @@
 </head>
 <body class="bg-[var(--brand-black)] text-white">
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-[var(--brand-black)]/80 backdrop-blur border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl gold-gradient"></div>
-        <div class="font-extrabold tracking-tight text-lg">Asset Snap</div>
-        <span class="hidden sm:inline text-white/50">by Vaultify</span>
-      </div>
-      <nav class="hidden md:flex items-center gap-8 text-sm">
-        <a href="#features" class="hover:text-[var(--brand-gold)] transition">Features</a>
-        <a href="#how" class="hover:text-[var(--brand-gold)] transition">How it works</a>
-        <a href="#mvp" class="hover:text-[var(--brand-gold)] transition">MVP Scope</a>
-      </nav>
-      <a href="#waitlist" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-[var(--brand-gold)] text-black hover:translate-y-[-1px] transition accent-shadow">
-        Join waitlist
-      </a>
+ <header class="sticky top-0 z-40 bg-[var(--brand-black)]/80 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <!-- Left: logo + wordmark -->
+    <div class="flex items-center gap-3">
+      <img
+        src="./Shield.jpg"
+        alt="Asset Snap shield logo"
+        class="w-9 h-9 object-contain"
+        width="36"
+        height="36"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <div class="font-extrabold tracking-tight text-lg">Asset Snap</div>
+      <span class="hidden sm:inline text-white/50">by Vaultify</span>
     </div>
-  </header>
+
+    <!-- Center: nav -->
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#features" class="hover:text-[var(--brand-gold)] transition">Features</a>
+      <a href="#how" class="hover:text-[var(--brand-gold)] transition">How it works</a>
+      <a href="#mvp" class="hover:text-[var(--brand-gold)] transition">MVP Scope</a>
+    </nav>
+
+    <!-- Right: CTA -->
+    <a href="#waitlist" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-[var(--brand-gold)] text-black hover:translate-y-[-1px] transition accent-shadow">
+      Join waitlist
+    </a>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
