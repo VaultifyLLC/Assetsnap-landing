@@ -127,13 +127,44 @@
   <section id="mvp" class="py-16 md:py-24 border-y border-white/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-extrabold mb-6">MVP Scope</h2>
-      <ul class="grid md:grid-cols-2 gap-4 text-white/80">
-        <li class="glass p-4 rounded-xl border border-white/10">Asset upload with AI processing (photos, OCR, auto‑categorize)</li>
-        <li class="glass p-4 rounded-xl border border-white/10">Policy upload + gap detection (demo logic)</li>
-        <li class="glass p-4 rounded-xl border border-white/10">Demo‑only coverage upgrade flow</li>
-        <li class="glass p-4 rounded-xl border border-white/10">Carrier dashboard (read‑only, demo data)</li>
-        <li class="glass p-4 rounded-xl border border-white/10">Consent toggle + clear data policy</li>
-      </ul>
+      <div class="grid md:grid-cols-2 gap-4 text-white/80">
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">Core features (v1)</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Item capture (camera/upload) with OCR → auto‑category + metadata (make/model/serial).</li>
+            <li>AI‑assisted value estimate (replacement‑cost range, beta).</li>
+            <li>Policy upload (PDF or photos) → basic gap highlights by category.</li>
+            <li>Inventory export (CSV/PDF) for claims & records.</li>
+          </ul>
+        </div>
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">For carriers & agents</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Read‑only carrier dashboard (demo data) with adoption and top under‑insured categories.</li>
+            <li>Demo‑only coverage upgrade flow (no live binding or payments).</li>
+            <li>Pilot access via invite codes; consent tracking.</li>
+          </ul>
+        </div>
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">Privacy & controls</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Clear consent toggle + “delete my data” request flow.</li>
+            <li>Secure storage & limited access for the pilot environment.</li>
+          </ul>
+        </div>
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">Not in this MVP</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Direct carrier integrations or real policy changes.</li>
+            <li>In‑app payments or endorsements binding.</li>
+            <li>Native mobile app (web app only for now).</li>
+            <li>Open API.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-6 text-sm text-white/60">
+        <strong>Pilot:</strong> closed beta; rolling invites; target cohort under 1,000 participants across carriers, agents, and policyholders. Carriers can request a pilot slot via the waitlist.
+      </div>
     </div>
   </section>
 
