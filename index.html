@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asset Snap — Cover Your Assets</title>
+  <meta name="description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist for Asset Snap by Vaultify." />
+  <meta property="og:title" content="Asset Snap — Cover Your Assets" />
+  <meta property="og:description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0b0b/f5c542&text=Asset+Snap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --brand-black:#0b0b0b; /* near-black */
+      --brand-gold:#f5c542; /* bold gold */
+      --brand-gold-700:#d4af37; /* deeper gold */
+    }
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    .gold-gradient{background:linear-gradient(135deg,var(--brand-gold) 0%, var(--brand-gold-700) 60%, #c99c2b 100%)}
+    .glass{backdrop-filter:saturate(140%) blur(10px); background:rgba(255,255,255,0.06)}
+    .ring-gold{box-shadow:0 0 0 2px rgba(245,197,66,0.35)}
+    .accent-shadow{box-shadow:0 10px 30px rgba(245,197,66,0.18)}
+  </style>
+</head>
+<body class="bg-[var(--brand-black)] text-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-[var(--brand-black)]/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl gold-gradient"></div>
+        <div class="font-extrabold tracking-tight text-lg">Asset Snap</div>
+        <span class="hidden sm:inline text-white/50">by Vaultify</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#features" class="hover:text-[var(--brand-gold)] transition">Features</a>
+        <a href="#how" class="hover:text-[var(--brand-gold)] transition">How it works</a>
+        <a href="#mvp" class="hover:text-[var(--brand-gold)] transition">MVP Scope</a>
+      </nav>
+      <a href="#waitlist" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-[var(--brand-gold)] text-black hover:translate-y-[-1px] transition accent-shadow">
+        Join waitlist
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="gold-gradient w-[140%] h-[140%] rounded-full blur-3xl absolute -top-40 -left-40 rotate-12"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs mb-4">
+            <span class="w-2 h-2 rounded-full bg-[var(--brand-gold)]"></span>
+            MVP Waitlist now open
+          </div>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+            Cover Your Assets.
+            <span class="text-[var(--brand-gold)]">Automatically.</span>
+          </h1>
+          <p class="mt-5 text-white/80 text-lg max-w-xl">
+            Asset Snap lets households and businesses catalog belongings with photos, receipts, and appraisals—then flags coverage gaps and organizes everything for claims.
+          </p>
+          <ul class="mt-6 space-y-2 text-white/75">
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> AI reads photos & receipts to auto‑categorize and estimate value.</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> Upload your policy to spot coverage gaps.</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> One‑tap (demo‑only) coverage upgrade flow for carriers.</li>
+          </ul>
+
+          <div class="mt-8">
+            <a href="#waitlist" class="inline-flex items-center gap-3 px-6 py-3 rounded-2xl text-base font-semibold bg-[var(--brand-gold)] text-black hover:translate-y-[-1px] transition accent-shadow ring-gold">
+              Get early access
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="glass rounded-3xl p-5 border border-white/10">
+            <div class="rounded-2xl overflow-hidden bg-black/60">
+              <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1470&auto=format&fit=crop" alt="Inventory app mock" class="w-full h-80 object-cover opacity-80">
+            </div>
+            <div class="mt-4 text-white/70 text-sm">Screenshot mock for illustration only. Final UI may vary.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 md:py-24 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <div class="text-2xl font-bold mb-2">Photo → Value</div>
+          <p class="text-white/70">Snap an item. We pull make/model/serials and estimate replacement cost.</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <div class="text-2xl font-bold mb-2">Policy Gap Alerts</div>
+          <p class="text-white/70">Upload a homeowners or BOP policy to spot under‑insured categories.</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <div class="text-2xl font-bold mb-2">Carrier‑First</div>
+          <p class="text-white/70">Demo‑only upgrade flow + carrier dashboard to view aggregate insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">How the MVP works</h2>
+      <ol class="space-y-4 text-white/80">
+        <li class="flex gap-4"><span class="w-8 h-8 flex items-center justify-center rounded-full gold-gradient text-black font-extrabold">1</span><span>Sign up for early access below. We'll invite a small group of carriers, agents, and policyholders.</span></li>
+        <li class="flex gap-4"><span class="w-8 h-8 flex items-center justify-center rounded-full gold-gradient text-black font-extrabold">2</span><span>Use the web app to capture items and upload your policy (PDF or photos).</span></li>
+        <li class="flex gap-4"><span class="w-8 h-8 flex items-center justify-center rounded-full gold-gradient text-black font-extrabold">3</span><span>Review AI‑generated categories, values, and suggested coverage improvements.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MVP Scope -->
+  <section id="mvp" class="py-16 md:py-24 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">MVP Scope</h2>
+      <ul class="grid md:grid-cols-2 gap-4 text-white/80">
+        <li class="glass p-4 rounded-xl border border-white/10">Asset upload with AI processing (photos, OCR, auto‑categorize)</li>
+        <li class="glass p-4 rounded-xl border border-white/10">Policy upload + gap detection (demo logic)</li>
+        <li class="glass p-4 rounded-xl border border-white/10">Demo‑only coverage upgrade flow</li>
+        <li class="glass p-4 rounded-xl border border-white/10">Carrier dashboard (read‑only, demo data)</li>
+        <li class="glass p-4 rounded-xl border border-white/10">Consent toggle + clear data policy</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Waitlist / Email capture -->
+  <section id="waitlist" class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass rounded-3xl p-8 md:p-10 border border-white/10">
+        <h3 class="text-2xl md:text-3xl font-extrabold">Get early access</h3>
+        <p class="text-white/75 mt-2">Join the MVP waitlist. We’ll only email important updates—no spam.</p>
+
+        <!-- Formspree: replace YOUR_FORMSPREE_ID -->
+        <form id="early-access-form" action="https://formspree.io/f/mblkwbap" method="POST" class="mt-6 grid grid-cols-1 gap-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-white/70 mb-1" for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none" placeholder="Jane Doe" />
+            </div>
+            <div>
+              <label class="block text-sm text-white/70 mb-1" for="email">Email<span class="text-[var(--brand-gold)]"> *</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none" placeholder="you@company.com" />
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-white/70 mb-1" for="role">I am a</label>
+              <select id="role" name="role" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none">
+                <option value="Policyholder">Policyholder</option>
+                <option value="Insurance Carrier">Insurance Carrier</option>
+                <option value="Insurance Agent/Broker">Insurance Agent/Broker</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm text-white/70 mb-1" for="company">Company (optional)</label>
+              <input id="company" name="company" type="text" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-[var(--brand-gold)] outline-none" placeholder="Acme Insurance Co." />
+            </div>
+          </div>
+
+          <!-- Consent -->
+          <label class="flex items-start gap-3 text-sm text-white/80 mt-2">
+            <input type="checkbox" name="consent" required class="mt-1 w-4 h-4 rounded border-white/20 bg-white/10" />
+            <span>I agree to receive product updates about Asset Snap and understand I can unsubscribe anytime.</span>
+          </label>
+
+          <!-- Anti-spam honeypot -->
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <input type="hidden" name="referrer" id="referrer" value="" />
+
+          <button id="submitBtn" type="submit" class="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl text-base font-semibold bg-[var(--brand-gold)] text-black hover:translate-y-[-1px] transition accent-shadow ring-gold disabled:opacity-60 disabled:cursor-not-allowed">
+            <span>Join the waitlist</span>
+            <svg id="spinner" class="w-5 h-5 hidden animate-spin" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" opacity=".25"/><path d="M22 12a10 10 0 00-10-10" stroke="currentColor" stroke-width="4" opacity=".9"/></svg>
+          </button>
+          <p id="formMsg" class="mt-3 text-sm text-white/80"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-white/60">
+      <div>
+        © <span id="year"></span> Vaultify LLC — Asset Snap. All rights reserved.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-white">Privacy</a>
+        <a href="#" class="hover:text-white">Terms</a>
+        <a href="#waitlist" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // year + referrer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('referrer').value = document.referrer;
+
+    // simple Formspree submit handler (shows success without leaving page)
+    const form = document.getElementById('early-access-form');
+    const btn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const msg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.textContent = '';
+      spinner.classList.remove('hidden');
+      btn.disabled = true;
+      try {
+        const data = new FormData(form);
+        // Formspree JSON endpoint
+        const endpoint = form.getAttribute('action');
+        const payload = Object.fromEntries(data.entries());
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) {
+          form.reset();
+          msg.textContent = 'Thanks! You’re on the list. We’ll be in touch soon.';
+        } else {
+          msg.textContent = 'Hmm, something went wrong. Please try again or email hello@snapmyassets.com';
+        }
+      } catch(err){
+        msg.textContent = 'Network error. Please try again.';
+      } finally {
+        spinner.classList.add('hidden');
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
