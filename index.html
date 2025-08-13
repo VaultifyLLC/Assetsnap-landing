@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asset Snap — Cover Your Assets</title>
+  <title>Asset Snap — Cover Your ASSets</title>
   <meta name="description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist for Asset Snap by Vaultify." />
   <meta property="og:title" content="Asset Snap — Cover Your Assets" />
   <meta property="og:description" content="Track your belongings for insurance with photos, receipts, and AI. Join the MVP waitlist." />
@@ -12,7 +12,47 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">  // Audience tab logic: toggles content, preselects role, and updates CTA label
+  (function(){
+    const tabBtns = document.querySelectorAll('[data-audience-tab]');
+    const policy = document.getElementById('audience-policyholder');
+    const carrier = document.getElementById('audience-carrier');
+    const roleSelect = document.getElementById('role');
+    const submitLabel = document.querySelector('#submitBtn span');
+
+    function setActive(aud){
+      tabBtns.forEach(b=>{
+        const isActive = b.getAttribute('data-audience-tab')===aud;
+        b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        b.classList.toggle('bg-[var(--brand-gold)]', isActive);
+        b.classList.toggle('text-black', isActive);
+        b.classList.toggle('bg-white/5', !isActive);
+        b.classList.toggle('text-white/80', !isActive);
+      });
+      if(policy && carrier){
+        policy.classList.toggle('hidden', aud!=='policyholder');
+        carrier.classList.toggle('hidden', aud!=='carrier');
+      }
+      if(roleSelect){
+        roleSelect.value = aud==='carrier' ? 'Insurance Carrier' : 'Policyholder';
+      }
+      if(submitLabel){
+        submitLabel.textContent = aud==='carrier' ? 'Join the carrier pilot' : 'Join the waitlist';
+      }
+      // persist in hash for shareable state
+      try { history.replaceState(null,'', aud==='carrier' ? '#for-carriers' : '#for-policyholders'); } catch(e){}
+    }
+
+    tabBtns.forEach(btn=>{
+      btn.addEventListener('click', ()=> setActive(btn.getAttribute('data-audience-tab')));
+    });
+
+    // initialize based on hash or default
+    const hash = location.hash;
+    const defaultAud = (hash==='#for-carriers') ? 'carrier' : 'policyholder';
+    setActive(defaultAud);
+  })();
+</script>
   <style>
     :root{
       --brand-black:#0b0b0b; /* near-black */
@@ -60,16 +100,16 @@
             MVP Waitlist now open
           </div>
           <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            Cover Your Assets.
+            Cover Your ASSets.
             <span class="text-[var(--brand-gold)]">Automatically.</span>
           </h1>
           <p class="mt-5 text-white/80 text-lg max-w-xl">
-            Asset Snap lets households and businesses catalog belongings with photos, receipts, and appraisals—then flags coverage gaps and organizes everything for claims.
+            Take photos of what you own, save receipts, and keep it all in one place. Asset Snap makes it easy to prove value and spot gaps in your insurance.
           </p>
           <ul class="mt-6 space-y-2 text-white/75">
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> AI reads photos & receipts to auto‑categorize and estimate value.</li>
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> Upload your policy to spot coverage gaps.</li>
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> One‑tap (demo‑only) coverage upgrade flow for carriers.</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> Snap a photo; we read the details and file it in the right place.</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> Upload your policy; we point out where you might be under‑covered.</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-1 text-[var(--brand-gold)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg> Carriers can try a demo flow to offer right‑sized coverage.</li>
           </ul>
 
           <div class="mt-8">
@@ -106,6 +146,65 @@
         <div class="glass rounded-2xl p-6 border border-white/10">
           <div class="text-2xl font-bold mb-2">Carrier‑First</div>
           <p class="text-white/70">Demo‑only upgrade flow + carrier dashboard to view aggregate insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section id="who" class="py-12 md:py-16 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Who it’s for</h2>
+
+      <!-- Audience Tabs -->
+      <div class="inline-flex items-center gap-1 p-1 rounded-2xl bg-white/5 border border-white/10 mb-6">
+        <button type="button" data-audience-tab="policyholder" aria-pressed="true"
+                class="px-4 py-2 rounded-xl text-sm font-semibold bg-[var(--brand-gold)] text-black">
+          I’m a Policyholder
+        </button>
+        <button type="button" data-audience-tab="carrier" aria-pressed="false"
+                class="px-4 py-2 rounded-xl text-sm font-semibold bg-white/5 text-white/80 hover:text-white">
+          I’m a Carrier / Agent
+        </button>
+      </div>
+
+      <!-- Policyholder content -->
+      <div id="audience-policyholder" class="grid md:grid-cols-2 gap-4 text-white/80">
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">For households</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Know what you own—photos, receipts, serial numbers in one place.</li>
+            <li>Be ready for claims with organized proof of value.</li>
+            <li>See where your policy might not fully cover you.</li>
+          </ul>
+        </div>
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">For small businesses</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Track equipment and inventory with photos and docs.</li>
+            <li>Export a clean report for your insurer or accountant.</li>
+            <li>Spot under‑insured categories before renewal.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Carrier content -->
+      <div id="audience-carrier" class="grid md:grid-cols-2 gap-4 text-white/80 hidden">
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">For carriers</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Pilot a lightweight inventory flow that customers complete in minutes.</li>
+            <li>See top under‑insured categories (demo dashboard).</li>
+            <li>Offer right‑sized coverage via a simple demo flow (no live binding).</li>
+          </ul>
+        </div>
+        <div class="glass p-5 rounded-xl border border-white/10">
+          <div class="text-lg font-bold text-white mb-1">For agents & brokers</div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Make account reviews faster with organized item lists and values.</li>
+            <li>Invite clients with codes; track consent for the pilot.</li>
+            <li>Export summaries to support quote conversations.</li>
+          </ul>
         </div>
       </div>
     </div>
